@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 
@@ -20,7 +21,11 @@ function WidgetMovies ({title, border, text, quantity, icon}) {
             </div>
         </div>
     )
-            
-
+}
+WidgetMovies.propTypes = {
+    title: PropTypes.string.isRequired,
+    icon: PropTypes.string.isRequired,
+    quantity: PropTypes.number.isRequired,
+    border: PropTypes.oneOf(['border-left-primary', 'border-left-success', 'border-left-warning']).isRequired,
 }
 export default WidgetMovies
